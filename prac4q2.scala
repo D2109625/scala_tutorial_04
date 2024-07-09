@@ -1,17 +1,11 @@
-object StringFilter {
-  def filterLongStrings(strings: List[String]): List[String] = {
-    strings.filter(_.length > 5)
-  }
+def patternmatch(x: Int): String = x match {
+  case x if x <= 0 => "Negative/Zero"
+  case x if x % 2 == 0 => "Even"
+  case x if x % 2 == 1 => "Odd"
+}
 
-  def main(args: Array[String]): Unit = {
-    
-    val sampleList = List("amara", "nayana", "chanchala", "kamal", "sunil", "dinushika", "pawan")
-
-    
-    val filteredList = filterLongStrings(sampleList)
-
-    
-    println("Original list: " + sampleList)
-    println("Filtered list (strings longer than 5 characters): " + filteredList)
-  }
+def main(args: Array[String]): Unit = {
+  println("Enter the number:")
+  val number = scala.io.StdIn.readInt()
+  println(patternmatch(number))
 }
