@@ -1,11 +1,11 @@
-object MeanCalculator {
-  def arithmeticMean(num1: Int, num2: Int): Double = {
-    val mean = (num1 + num2) / 2.0
-    mean
-  }
+def PatternMatch(x:Int):String = x match {
+  case x if x<=0 => "Negative/Zero";
+  case x if x%2==0 => "Even";
+  case x if x%2==1 => "Odd";
+}
 
-  def main(args: Array[String]): Unit = {
-    val mean = arithmeticMean(13, 30)
-    println(f"$mean%.2f") 
-  }
+object O4 extends App{
+    println(PatternMatch(2))
+    println(PatternMatch(3))
+    println(PatternMatch(-4))
 }
